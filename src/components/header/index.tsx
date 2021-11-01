@@ -69,7 +69,7 @@ const menuList: MenuLink[] = [
 
 const Header = () => {
   return (
-    <AppHeader className='flex items-center justify-around fixed t-0 w-full'>
+    <AppHeader className='flex items-center justify-around fixed t-0 w-full z-10'>
       <LogoContainer className='flex items-center'>
         <div className='logo-wrapper'>
           <img src={logo} className='w-full h-full' alt='Logo' />

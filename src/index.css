@@ -26,6 +26,26 @@ code {
     monospace;
 }
 
+a.readmore {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  color: #46aadc;
+}
+
+a.readmore:hover,
+a.readmore:active,
+a.readmore:focus {
+  text-decoration: underline;
+}
+
+a.readmore svg {
+  display: inline-block;
+  margin: 0 10px;
+  color: inherit;
+}
+
 html::-webkit-scrollbar {
   background-color: #f3f5f7;
 }

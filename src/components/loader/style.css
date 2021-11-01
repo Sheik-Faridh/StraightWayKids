@@ -2,6 +2,7 @@ section.loader-container {
   background-color: #1c2b39;
   color: #3df1f1;
   line-height: 1.5;
+  z-index: 9999;
 }
 
 section.loader-container div.preloader {

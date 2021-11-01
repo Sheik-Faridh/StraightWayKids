@@ -1,4 +1,16 @@
+import styled from 'styled-components';
 import './style.css';
+
+interface PreloaderSectorProps {
+  position: number;
+}
+
+const PreloaderSector = styled.div`
+  transform: rotateY(
+      ${(props: PreloaderSectorProps) => 12 * (props.position - 1)}deg
+    )
+    translateZ(7rem) !important;
+`;
 
 const Loader = () => {
   const text = 'Loading...';
@@ -6,27 +18,19 @@ const Loader = () => {
   const ringSectors = 30;
 
   return (
-    <section className='w-screen h-screen flex items-center justify-center loader-container absolute'>
+    <section className='w-screen h-screen flex items-center justify-center loader-container fixed'>
       <div className='preloader'>
         {Array.from({ length: rings }, (_, index) => index + 1).map((p) => (
           <div key={p} className='preloader__ring'>
             {Array.from({ length: ringSectors }, (_, index) => index + 1).map(
               (s, i) => (
-                <div
+                <PreloaderSector
                   key={s}
                   className='preloader__sector'
-                  style={
-                    s !== 1
-                      ? {
-                          transform: `rotateY(${
-                            12 * (s - 1)
-                          }deg) translateZ(7rem)`,
-                        }
-                      : {}
-                  }
+                  position={s}
                 >
                   {text[i] || ''}
-                </div>
+                </PreloaderSector>
               )
             )}
           </div>
