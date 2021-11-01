@@ -1,0 +1,38 @@
+{
+  "name": "Straight Way",
+  "type": "Kids School",
+  "footer_details": {
+    "about": "<b>STRAIGHT WAY KIDS SCHOOL</b> is a wonderful school where all staff members understand the sacrifice they must make to help students succeed. It is located at Cumbum which was fenced by the majestic Western Ghats.",
+    "quick_links": [
+      { "name": "About Us", "path": "" },
+      { "name": "Admission", "path": "" },
+      { "name": "NewsLetter", "path": "" },
+      { "name": "Franchise", "path": "" },
+      { "name": "Contact Us", "path": "" }
+    ],
+    "contact_lists": {
+      "location": {
+        "link": "",
+        "text": "#33-A, Pulavar Street,<br />Cumbum,<br />Theni District - 625 516."
+      },
+      "phone": {
+        "link": "tel:",
+        "text": "+91-98947 42228"
+      },
+      "email": {
+        "link": "mailto:straightwaykidschool@gmail.com",
+        "text": "straightwaykidschool@gmail.com"
+      }
+    }
+  },
+  "social_media": {
+    "facebook": "",
+    "twitter": "",
+    "instagram": "",
+    "youtube": ""
+  },
+  "developed_by": {
+    "name": "N Sheik Faridh",
+    "link": "https://sheik-ibnu-nousadh.netlify.app"
+  }
+}
