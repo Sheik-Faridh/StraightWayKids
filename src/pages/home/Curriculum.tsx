@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import styled from 'styled-components';
 import { BsArrowRightShort } from 'react-icons/bs';
 import DOMPurify from 'dompurify';
@@ -7,8 +8,6 @@ import {
 	ElementProps,
 } from 'typings';
 import schoolData from 'mock/school.json';
-import SportIcon from 'assets/icons/sport.svg';
-import { useState } from 'react';
 
 const ObjectiveContainer = styled.div`
 	width: 50%;
@@ -32,6 +31,7 @@ const ObjectiveContainer = styled.div`
 		font-size: 52px;
 		line-height: 1.3em;
 		color: #12344d;
+		margin-bottom: 15px;
 	}
 	& p {
 		font-weight: 400;
@@ -84,7 +84,13 @@ const ElementContainer = styled.div`
 					}
 				}
 				& p {
+					color: #777;
 					font-size: 13px;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					-webkit-line-clamp: 4;
+					display: -webkit-box;
+					-webkit-box-orient: vertical;
 				}
 			}
 		}
@@ -122,7 +128,7 @@ const ElementList = styled.li`
 		border: 2px solid #eaf5f7;
 	}
 	& img {
-		width: 50%;
+		width: 35%;
 	}
 	& span {
 		font-size: 12px;
@@ -147,7 +153,12 @@ const Elements = () => {
 							onMouseEnter={() => setCurriculumElem(elem)}
 							onMouseLeave={() => setCurriculumElem(null)}
 						>
-							{elem.icon && <img src={SportIcon} alt={elem.icon} />}
+							{elem.icon && (
+								<img
+									src={require(`assets/${elem.icon}`).default}
+									alt={elem.icon}
+								/>
+							)}
 							<span>{elem.name}</span>
 						</ElementList>
 					))}
@@ -188,9 +199,11 @@ const Objective = () => {
 
 const Curriculum = () => {
 	return (
-		<div className='flex flex-row items-center p-4'>
-			<Objective />
-			<Elements />
+		<div className='flex items-center justify-center w-full'>
+			<div className='flex flex-row w-8/12 p-4 shadow-lg bg-white'>
+				<Objective />
+				<Elements />
+			</div>
 		</div>
 	);
 };

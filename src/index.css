@@ -4,62 +4,70 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Arabic';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Arabic'),
-    url('./assets/fonts/Ramadhan\ Karim.ttf') format('truetype');
+	font-family: 'Arabic';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Arabic'),
+		url('./assets/fonts/Ramadhan\ Karim.ttf') format('truetype');
 }
 
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	overflow-x: hidden;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+		monospace;
 }
 
 a.readmore {
-  font-style: normal;
-  font-weight: 600;
-  font-size: 14px;
-  letter-spacing: 0.05em;
-  color: #46aadc;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 14px;
+	letter-spacing: 0.05em;
+	color: #46aadc;
 }
 
 a.readmore:hover,
 a.readmore:active,
 a.readmore:focus {
-  text-decoration: underline;
+	text-decoration: underline;
 }
 
 a.readmore svg {
-  display: inline-block;
-  margin: 0 10px;
-  color: inherit;
+	display: inline-block;
+	margin: 0 10px;
+	color: inherit;
+}
+
+blockquote::before {
+	content: '\201C';
+}
+
+blockquote::after {
+	content: '\201D';
 }
 
 html::-webkit-scrollbar {
-  background-color: #f3f5f7;
+	background-color: #f3f5f7;
 }
 
 html::-webkit-scrollbar-corner {
-  background-color: #f3f5f7;
+	background-color: #f3f5f7;
 }
 
 html::-webkit-scrollbar-thumb {
-  background-color: #b2beca;
-  border-radius: 5px;
-  border: 2px solid #f3f5f7;
+	background-color: #b2beca;
+	border-radius: 5px;
+	border: 2px solid #f3f5f7;
 }
 
 html::-webkit-scrollbar-track {
-  background-color: #f3f5f7;
+	background-color: #f3f5f7;
 }

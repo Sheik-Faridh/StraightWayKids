@@ -2,42 +2,65 @@
 	"name": "Straight Way",
 	"type": "Kids School",
 	"home_page": {
+		"prospectus": {
+			"versus": "Al Qur'aan 01:06",
+			"arabic_content": "ٱهْدِنَا ٱلصِّرَٰطَ ٱلْمُسْتَقِيمَ",
+			"english_content": "Show us the Straight Way"
+		},
+		"boardOfSchool": {
+			"correspondent": {
+				"title": "from the correspondent’s desk",
+				"avatar": "images/correspondent.jpg",
+				"surname": "Moulavi. Al Hafizh.",
+				"name": "A.Z.MOHAMMED HARIS",
+				"about": "Our teachers will teach to the best of their ability every day; guiding your child on a path that will give him/her the skills necessary for a productive future in this world (duniya) & hereafter (akhirah). The teachers are trained to employ effective strategies that appeal to the human mind and reason, to sense experience and knowledge revealed to the Prophets. Thus, the teachers employ laboratory work, discussion, community of inquiry, ethical inquiry, comparative religious study, problem-based learning, group presentation, field trips, mastery learning, public speaking skills, etc.<br />I am confident that Straightway will always be a guiding light, guiding the destiny of its students and radiating compassion as it soars high in its pursuit of academic excellence, leadership and Islamic code of conduct.",
+				"degree": "Hasani"
+			},
+			"principal": {
+				"title": "from the principal's desk",
+				"avatar": "images/principal.jpg",
+				"surname": "Moulavi.",
+				"name": "S.MOHAMMED JEMIL",
+				"about": "Education is a shared commitment between teachers, students and parents. Today, the role of a school is not only to pursue academic excellence but also to motivate and empower its students to be lifelong learners, critical thinkers, and productive members of an ever-changing global society.",
+				"degree": "Hasani, M.A., M.Ed., M.Phil."
+			}
+		},
 		"title": "Best CBSE School in Cumbum",
 		"objective": "The Straight Way Kids School firmly believes that by educating our children in a balanced way in both government curriculum and Islamic studies they will grow up to be good Muslims who will thereby automatically become good citizens and part of the solution, not part of the problem. <br /> <br /> Prophet Muhammad (SAW) stated that “No father can give his child anything better than good manners”. <br /> <br /> The Islamic Studies subjects include: Islamic Akhlaq (Manners), Tawheed, Aqeedah, Fiqh (Essentials and Practices), Qur’an reading / recitation and Hifz (memorization), Islamic History, and basic Arabic. <br /> <br /> Islamic studies are also integrated with other subjects such as Science and Mathematics. Everything we teach in the classroom can be linked to Islam. <br /> <br /> Primary Students enrolled at Al-Hidayah Islamic School do not need extra lessons in religion at an after school or weekend ‘Madrasah’; the School provides quality Islamic education which sufficiently covers the requirements for their age group during the normal school day.",
 		"curriculum_elements": [
 			{
 				"name": "Islamic Studies",
-				"icon": "",
-				"content": ""
+				"icon": "images/islamic-studies.png",
+				"content": "Islamic education educates the child with the right knowledge of Islam. Providing Islamic education allows the right knowledge of Islam to be taught to children. Parents or grandparents may not have 100% knowledge or correct information as they may not have gone to classes formally for all aspects of Islam."
 			},
 			{
 				"name": "Hifzul Quran",
-				"icon": "",
-				"content": ""
+				"icon": "images/quran.png",
+				"content": "The primary purpose is to allow students (and their parents) the opportunity to memorize the Holy Quran completely."
 			},
 			{
 				"name": "Literacy",
-				"icon": "",
+				"icon": "icons/literacy.svg",
 				"content": "A systematic and integrated literacy program promote language development preschool children. The program uses systematic, direct instruction built around a series of weekly books in the classroom."
 			},
 			{
 				"name": "Montessori Play Method",
-				"icon": "",
-				"content": ""
+				"icon": "images/montessori.png",
+				"content": "In Montessori classrooms children make creative choices in their learning, while the classroom and the highly trained teacher offer age-appropriate activities to guide the process."
 			},
 			{
 				"name": "Outdoor",
-				"icon": "outdoor.svg",
+				"icon": "icons/outdoor.svg",
 				"content": "Our children benefit from a variety of outdoor play spaces. In addition to our playground, they experience the natural wonders of the forest, the big field, our raised gardens and nature walks."
 			},
 			{
 				"name": "Sports",
-				"icon": "sport.svg",
+				"icon": "icons/sport.svg",
 				"content": "Excursions form a vital part of a child’s early education. They expose a child to a range of different experiences and enable them to gain a sense of the world in which they find themselves."
 			},
 			{
 				"name": "Excursion",
-				"icon": "excursion.svg",
+				"icon": "icons/excursion.svg",
 				"content": "Excursions form a vital part of a child’s early education. They expose a child to a range of different experiences and enable them to gain a sense of the world in which they find themselves."
 			}
 		]
