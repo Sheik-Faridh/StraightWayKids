@@ -2,6 +2,18 @@
 	"name": "Straight Way",
 	"type": "Kids School",
 	"home_page": {
+		"flash": [
+			"Admission starts from 2021 - 22",
+			"School reopening on Nov 1 2021"
+		],
+		"sliderImages": [
+			{ "name": "image-slider-1.jpg", "content": "Hafiz + Professional" },
+			{
+				"name": "image-slider-2.jpg",
+				"content": "Islamic Path/Towards Hifzul Quran"
+			},
+			{ "name": "image-slider-3.jpg", "content": "Montessori Play Way Method" }
+		],
 		"prospectus": {
 			"versus": "Al Qur'aan 01:06",
 			"arabic_content": "ٱهْدِنَا ٱلصِّرَٰطَ ٱلْمُسْتَقِيمَ",

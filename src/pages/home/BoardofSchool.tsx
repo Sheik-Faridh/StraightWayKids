@@ -5,7 +5,7 @@ import { BoardSchoolMemberModel } from 'typings';
 
 const Container = styled.section`
 	gap: 30px;
-	background-color: #eff8fa;
+	background-color: #e7ecec;
 	padding: 3em 1em;
 	& > div.board-member-container {
 		gap: 20px;
