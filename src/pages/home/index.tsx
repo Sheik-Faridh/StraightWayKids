@@ -6,6 +6,7 @@ import Curriculum from './Curriculum';
 import BoardofSchool from './BoardofSchool';
 import { LoaderProps } from 'typings';
 import ImageSlider from './ImageSlider';
+import Video from './Video';
 
 const HomeContainer = styled.div`
 	padding: 90px 0 0;
@@ -26,6 +27,7 @@ const Home = ({ setLoading }: LoaderProps) => {
 		<HomeContainer className='w-screen min-h-screen'>
 			<ImageSlider />
 			<Prospectus />
+			<Video />
 			<Curriculum />
 			<BoardofSchool />
 		</HomeContainer>
