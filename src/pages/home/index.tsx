@@ -1,4 +1,5 @@
-import { useEffect } from 'react';
+import { useEffect, useLayoutEffect, useMemo } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
 import withLoader from 'hoc/withloader';
 import Prospectus from './Prospectus';
@@ -7,23 +8,42 @@ import BoardofSchool from './BoardofSchool';
 import { LoaderProps } from 'typings';
 import ImageSlider from './ImageSlider';
 import Video from './Video';
+import { fetchHomePageData } from 'store/actions/home.actions';
+import homeContainerStyles from 'styles/home/home.styles';
+import { RootState } from 'store';
 
 const HomeContainer = styled.div`
-	padding: 90px 0 0;
-	& > div {
-		padding: 60px 20px;
-		background-color: #eff3f6;
-	}
+	${homeContainerStyles}
 `;
 
-const Home = ({ setLoading }: LoaderProps) => {
-	useEffect(() => {
-		setTimeout(() => {
-			setLoading(false);
-		}, 4000);
-	}, []);
+const Home: React.FC<LoaderProps> = ({ setLoading }) => {
+	const rootState = useSelector((state: RootState) => state);
+	const { home, common } = rootState;
+	const hideLoader = useMemo(
+		() =>
+			Object.keys(home).length && Object.keys(common).length ? true : false,
+		[home, common]
+	);
 
-	return (
+	const dispatch = useDispatch();
+
+	useEffect(
+		() => {
+			dispatch(fetchHomePageData());
+		},
+		//eslint-disable-next-line
+		[]
+	);
+
+	useLayoutEffect(
+		() => {
+			if (hideLoader) setLoading(false);
+		},
+		//eslint-disable-next-line
+		[hideLoader]
+	);
+
+	return hideLoader ? (
 		<HomeContainer className='w-screen min-h-screen'>
 			<ImageSlider />
 			<Prospectus />
@@ -31,7 +51,7 @@ const Home = ({ setLoading }: LoaderProps) => {
 			<Curriculum />
 			<BoardofSchool />
 		</HomeContainer>
-	);
+	) : null;
 };
 
 export default withLoader(Home);

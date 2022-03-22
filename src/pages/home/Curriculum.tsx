@@ -1,158 +1,56 @@
 import { useState } from 'react';
+import { useSelector } from 'react-redux';
+import { CSSTransition } from 'react-transition-group';
 import styled from 'styled-components';
 import { BsArrowRightShort } from 'react-icons/bs';
 import DOMPurify from 'dompurify';
+import { CurriculumElementState } from 'typings';
 import {
-	CurriculumElementProps,
-	CurriculumElemntState,
-	ElementProps,
-} from 'typings';
-import schoolData from 'mock/school.json';
+	containerStyles,
+	elementContainerStyles,
+	elementListStyles,
+	objectiveContainerStyles,
+} from 'styles/home/curriculum.styles';
+import { RootState } from 'store';
+
+const Container = styled.div.attrs({
+	className: 'flex items-center justify-center w-full',
+})`
+	${containerStyles}
+`;
 
 const ObjectiveContainer = styled.div`
-	width: 50%;
-	& h4 {
-		display: flex;
-		flex-direction: row;
-		font-style: italic;
-		font-size: 22px;
-		color: #3b4757;
-
-		&:before {
-			content: '';
-			flex: 0 1 50px;
-			border-bottom: 3px solid #46aadc;
-			margin: auto 0;
-			margin-right: 10px;
-		}
-	}
-	& h1 {
-		font-family: 'Arabic';
-		font-size: 52px;
-		line-height: 1.3em;
-		color: #12344d;
-		margin-bottom: 15px;
-	}
-	& p {
-		font-weight: 400;
-		font-size: 15px;
-		line-height: 1.5em;
-		color: #777;
-		margin-bottom: 15px;
-	}
+	${objectiveContainerStyles}
 `;
 
 const ElementContainer = styled.div`
-	width: 50%;
-	& > div {
-		width: ${(props: ElementProps) => props.size}em;
-		height: ${(props: ElementProps) => props.size}em;
-		& ul {
-			width: 100%;
-			height: 100%;
-			border-radius: 50%;
-			padding: 0;
-			font-size: 14px;
-			list-style: none;
-			margin: 0;
-			border: 5px solid #eaf5f7;
-		}
-		& div.element-content {
-			top: 0;
-			& > div {
-				width: ${(props: ElementProps) => props.size / 2}em;
-				gap: 10px;
-				& h2 {
-					position: relative;
-					font-weight: 500;
-					font-size: 32px;
-					line-height: 1.3em;
-					color: #12344d;
-					text-align: center;
-					padding-bottom: 15px;
-					&::after {
-						content: '';
-						position: absolute;
-						bottom: 0;
-						left: 50%;
-						-webkit-transform: translateX(-50%);
-						-ms-transform: translateX(-50%);
-						transform: translateX(-50%);
-						width: 41px;
-						height: 3px;
-						background: #46aadc;
-					}
-				}
-				& p {
-					color: #777;
-					font-size: 13px;
-					overflow: hidden;
-					text-overflow: ellipsis;
-					-webkit-line-clamp: 4;
-					display: -webkit-box;
-					-webkit-box-orient: vertical;
-				}
-			}
-		}
-	}
+	${elementContainerStyles}
 `;
 
 const ElementList = styled.li`
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	gap: 10px;
-	border-radius: 50%;
-	background: #eaf5f7;
-	position: absolute;
-	text-align: center;
-	top: 50%;
-	left: 50%;
-	margin: -4em;
-	width: 8em;
-	height: 8em;
-	color: #12344d;
-	z-index: 5;
-	transform: rotate(
-			${(props: CurriculumElementProps) =>
-				props.position * Math.ceil(360 / props.count)}deg
-		)
-		translate(${(props: CurriculumElementProps) => props.size / 2}em)
-		rotate(
-			${(props: CurriculumElementProps) =>
-				-(props.position * Math.ceil(360 / props.count))}deg
-		);
-	&:hover {
-		background: #fff;
-		border: 2px solid #eaf5f7;
-	}
-	& img {
-		width: 35%;
-	}
-	& span {
-		font-size: 12px;
-	}
+	${elementListStyles}
 `;
 
 const Elements = () => {
+	const curriculum_elements = useSelector(
+		(state: RootState) => state.home.curriculum_elements
+	);
 	const [curriculumElem, setCurriculumElem] =
-		useState<CurriculumElemntState | null>(null);
+		useState<CurriculumElementState | null>(null);
 	const size = 27;
 
 	return (
 		<ElementContainer className='flex items-center justify-center' size={size}>
 			<div className='relative'>
 				<ul className='relative'>
-					{schoolData.home_page.curriculum_elements.map((elem, i) => (
+					{curriculum_elements.map((elem, i) => (
 						<ElementList
 							key={elem.name}
 							position={i}
-							count={schoolData.home_page.curriculum_elements.length}
+							count={curriculum_elements.length}
 							size={size}
 							onMouseEnter={() => setCurriculumElem(elem)}
-							onMouseLeave={() => setCurriculumElem(null)}
-						>
+							onMouseLeave={() => setCurriculumElem(null)}>
 							{elem.icon && (
 								<img
 									src={require(`assets/${elem.icon}`).default}
@@ -177,34 +75,46 @@ const Elements = () => {
 };
 
 const Objective = () => {
+	const objective = useSelector((state: RootState) => state.home.objective);
 	return (
 		<ObjectiveContainer>
-			<h4>{schoolData.home_page.title}</h4>
-			<div className='pl-3'>
-				<h1>
-					{schoolData.name} {schoolData.type}
-				</h1>
-				<p
-					dangerouslySetInnerHTML={{
-						__html: DOMPurify.sanitize(schoolData.home_page.objective),
-					}}
-				/>
-				<a href='/about-us' className='readmore'>
-					Read More <BsArrowRightShort />
-				</a>
-			</div>
+			<CSSTransition
+				classNames='fade'
+				timeout={{ enter: 5000, exit: 5000 }}
+				key='homePageObjective'>
+				<div className='pl-3'>
+					<p
+						dangerouslySetInnerHTML={{
+							__html: DOMPurify.sanitize(objective),
+						}}
+					/>
+					<a href='/about-us' className='readmore'>
+						Read More <BsArrowRightShort />
+					</a>
+				</div>
+			</CSSTransition>
 		</ObjectiveContainer>
 	);
 };
 
 const Curriculum = () => {
+	const rootState = useSelector((state: RootState) => state);
+	const { home, common } = rootState;
 	return (
-		<div className='flex items-center justify-center w-full'>
-			<div className='flex flex-row w-8/12 p-4 shadow-lg bg-white'>
-				<Objective />
-				<Elements />
+		<Container>
+			<div className='flex flex-col w-8/12 p-4 shadow-lg bg-white'>
+				<div className='headings'>
+					<h4>{home.title}</h4>
+					<h1>
+						{common.name} {common.type}
+					</h1>
+				</div>
+				<div className='flex flex-row'>
+					<Objective />
+					<Elements />
+				</div>
 			</div>
-		</div>
+		</Container>
 	);
 };
 

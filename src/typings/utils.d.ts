@@ -28,7 +28,7 @@ export interface CurriculumElementProps extends PositionProps {
 	size: number;
 }
 
-export interface CurriculumElemntState {
+export interface CurriculumElementState {
 	name: string;
 	icon: string;
 	content: string;

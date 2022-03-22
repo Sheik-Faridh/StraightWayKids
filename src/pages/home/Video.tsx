@@ -1,27 +1,14 @@
 import styled from 'styled-components';
-import schoolData from 'mock/school.json';
+import { useSelector } from 'react-redux';
+import { RootState } from 'store';
+import videoContainerStyles from 'styles/home/video.styles';
 
 const Container = styled.section`
-	& .img-wrapper {
-		z-index: -2;
-	}
-	& .overlay {
-		background-color: #000408;
-		opacity: 0.8;
-		transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
-		z-index: -1;
-	}
-	& h2 {
-		font-size: 3em;
-		color: #fff;
-	}
-	& p {
-		color: #fff;
-	}
+	${videoContainerStyles}
 `;
 
 const Video = () => {
-	const { video } = schoolData.home_page;
+	const video = useSelector((state: RootState) => state.home.video);
 
 	return (
 		<Container className='w-screen h-screen'>
@@ -42,8 +29,7 @@ const Video = () => {
 						title='YouTube video player'
 						frameBorder='0'
 						allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-						allowFullScreen
-					></iframe>
+						allowFullScreen></iframe>
 				</div>
 				<div className='w-1/2'>
 					<h2>{video.quotes}</h2>

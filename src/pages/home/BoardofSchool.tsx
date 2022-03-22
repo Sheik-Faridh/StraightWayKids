@@ -1,43 +1,12 @@
 import styled from 'styled-components';
+import { useSelector } from 'react-redux';
 import DOMPurify from 'dompurify';
-import schoolData from 'mock/school.json';
 import { BoardSchoolMemberModel } from 'typings';
+import boardOfSchoolStyles from 'styles/home/board_of_school.styles';
+import { RootState } from 'store';
 
 const Container = styled.section`
-	gap: 30px;
-	background-color: #e7ecec;
-	padding: 3em 1em;
-	& > div.board-member-container {
-		gap: 20px;
-		& h1 {
-			font-size: 2em;
-			color: #12344d;
-		}
-		& > div.user-info-wrapper {
-			padding: 2.5em;
-			gap: 20px;
-			& > div.user-info {
-				gap: 10px;
-				& > div.img-wrapper {
-					width: 110px;
-					height: 110px;
-				}
-				& h5.surname {
-					color: #7f93a0;
-				}
-				& small {
-					font-size: 40%;
-					color: #7b8186;
-				}
-			}
-			& > div.about-container {
-				font-family: National-Book, National-Medium, sans-serif;
-				font-size: 16px;
-				line-height: 2em;
-				color: #12344d;
-			}
-		}
-	}
+	${boardOfSchoolStyles}
 `;
 
 const Member = (props: BoardSchoolMemberModel) => {
@@ -68,7 +37,8 @@ const Member = (props: BoardSchoolMemberModel) => {
 };
 
 const BoardofSchool = () => {
-	const { correspondent, principal } = schoolData.home_page.boardOfSchool;
+	const home_page = useSelector((state: RootState) => state.home);
+	const { correspondent, principal } = home_page.boardOfSchool;
 
 	return (
 		<Container className='flex flex-col justify-center w-screen'>
