@@ -1,7 +1,23 @@
 /* ./src/index.css */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
+:root {
+	--input-border-color: rgb(207, 215, 223);
+	--input-bg: rgb(255, 255, 255);
+	--input-hover-border-color: rgb(71, 88, 103);
+	--input-focus-bg: rgb(255, 255, 255);
+	--input-focus-color: rgb(44 92 197);
+	--btn-primary-bg: #264966;
+	--btn-primary-color: #fff;
+	--btn-primary-bg-dark: #12344d;
+	--btn-secondary-bg: #fff;
+	--btn-secondary-bg-dark: #f3f5f7;
+	--btn-secondary-border: #cfd7df;
+	--btn-secondary-border-active: #ebeff3;
+	--btn-danger-bg: #d72d30;
+	--btn-danger-bg-dark: #c82124;
+	--btn-danger-border: #c82124;
+	--active-box-shadow: inset 0 0 4px 0 rgba(0, 0, 0, 0.25);
+}
 
 @font-face {
 	font-family: 'Arabic';
@@ -70,4 +86,42 @@ html::-webkit-scrollbar-thumb {
 
 html::-webkit-scrollbar-track {
 	background-color: #f3f5f7;
+}
+
+.ant-picker-input input::placeholder {
+	color: #e5e7eb;
+	font-weight: 500;
+}
+
+.ant-select .ant-select-selector:hover,
+.ant-picker:hover {
+	border: 1px solid var(--input-hover-border-color) !important;
+	transition: all 0.2s linear 0s;
+}
+
+.ant-select-focused.ant-select .ant-select-selector,
+.ant-picker-focused {
+	outline: none;
+	background: var(--input-focus-bg) !important;
+	border: 1px solid transparent !important;
+	box-shadow: var(--input-focus-color) 0px 0px 0px 2px !important;
+}
+
+.ant-select-dropdown .ant-select-item-option-active {
+	background: #f3f5f7 !important;
+}
+
+.ant-select-dropdown .ant-select-item-option-selected,
+.ant-picker-cell-in-view.ant-picker-cell-selected .ant-picker-cell-inner,
+.ant-picker-cell-in-view.ant-picker-cell-range-start .ant-picker-cell-inner,
+.ant-picker-cell-in-view.ant-picker-cell-range-end .ant-picker-cell-inner,
+.ant-picker-cell-selected .ant-picker-calendar-date {
+	background: #e5f2fd !important;
+	color: #2c5cc5 !important;
+	font-weight: 500;
+}
+
+.ant-select-selection-item-content {
+	color: #12344d !important;
+	font-size: 13px;
 }

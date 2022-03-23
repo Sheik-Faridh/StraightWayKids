@@ -1,0 +1,135 @@
+{
+	"form": [
+		{
+			"name": "studentName",
+			"label": "Student Name",
+			"field": "input",
+			"type": "text",
+			"required": true
+		},
+		{
+			"name": "parentOrGuardianName",
+			"label": "Parent or Guardian Name",
+			"field": "input",
+			"type": "text",
+			"required": true
+		},
+		{
+			"name": "gradeEnquiryFor",
+			"label": "Grade Enquiring for",
+			"field": "select",
+			"type": "text",
+			"required": true,
+			"options": [
+				{
+					"name": "Pre-KG",
+					"value": "pre-kg"
+				},
+				{
+					"name": "LKG",
+					"value": "lkg"
+				},
+				{
+					"name": "UKG",
+					"value": "ukg"
+				},
+				{
+					"name": "1st STD",
+					"value": "1st-std"
+				},
+				{
+					"name": "2nd STD",
+					"value": "2nd-std"
+				},
+				{
+					"name": "3rd STD",
+					"value": "3rd-std"
+				},
+				{
+					"name": "4th STD",
+					"value": "4th-std"
+				},
+				{
+					"name": "5th STD",
+					"value": "5th-std"
+				}
+			]
+		},
+		{
+			"name": "currentGrade",
+			"label": "Current Grade",
+			"field": "select",
+			"type": "text",
+			"required": true,
+			"options": [
+				{
+					"name": "Pre-KG",
+					"value": "pre-kg"
+				},
+				{
+					"name": "LKG",
+					"value": "lkg"
+				},
+				{
+					"name": "UKG",
+					"value": "ukg"
+				},
+				{
+					"name": "1st STD",
+					"value": "1st-std"
+				},
+				{
+					"name": "2nd STD",
+					"value": "2nd-std"
+				},
+				{
+					"name": "3rd STD",
+					"value": "3rd-std"
+				},
+				{
+					"name": "4th STD",
+					"value": "4th-std"
+				},
+				{
+					"name": "5th STD",
+					"value": "5th-std"
+				}
+			]
+		},
+		{
+			"name": "currentSchoolName",
+			"label": "Current School Name",
+			"field": "input",
+			"type": "text",
+			"required": true
+		},
+		{
+			"name": "dob",
+			"label": "Date Of Birth",
+			"field": "date",
+			"type": "text",
+			"required": true
+		},
+		{
+			"name": "phone",
+			"label": "Phone Number",
+			"field": "input",
+			"type": "phone",
+			"required": true
+		},
+		{
+			"name": "email",
+			"label": "Email",
+			"field": "input",
+			"type": "email",
+			"required": false
+		},
+		{
+			"name": "additionalComments",
+			"label": "Additional Comments",
+			"field": "textarea",
+			"type": "text",
+			"required": false
+		}
+	]
+}

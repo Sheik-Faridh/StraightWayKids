@@ -20,8 +20,8 @@ const Logo = () => {
 				<img src={schoolImg} className='w-full h-full' alt='School Logo' />
 			</div>
 			<div className='flex flex-col justify-center school-name'>
-				<h2>{commonDetails.name}</h2>
-				<h4>{commonDetails.type}</h4>
+				<h2 className='text-white m-0'>{commonDetails.name}</h2>
+				<h4 className='text-white m-0'>{commonDetails.type}</h4>
 			</div>
 		</div>
 	);
@@ -59,7 +59,9 @@ const FooterTop = () => {
 				<ul className='flex flex-wrap'>
 					{commonDetails.footer_details.quick_links.map((l) => (
 						<li className='w-1/2 text-white' key={l.name}>
-							<a href={l.path}>{l.name}</a>
+							<a href={l.path} className='text-white'>
+								{l.name}
+							</a>
 						</li>
 					))}
 				</ul>

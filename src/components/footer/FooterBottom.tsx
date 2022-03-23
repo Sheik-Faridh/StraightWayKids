@@ -40,7 +40,7 @@ const FooterBottom = () => {
 
 	return (
 		<Container className='flex justify-around	items-center'>
-			<p className='copyrights'>
+			<p className='copyrights m-0'>
 				© 2021 Developed By
 				<a
 					href={commonDetails.developed_by.link}

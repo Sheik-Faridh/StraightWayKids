@@ -63,6 +63,7 @@ const Link = ({ name, path }: MenuLink) => {
 			key={name}
 			className={classnames({
 				'cursor-pointer': true,
+				'text-base': true,
 				active: pathname === path,
 			})}
 			onClick={handleClick}>
@@ -81,11 +82,11 @@ const Header = () => {
 					<img src={logo} className='w-full h-full' alt='Logo' />
 				</div>
 				<div className='school-name-wrapper'>
-					<h2>{commonDetails.name}</h2>
-					<h4>{commonDetails.type}</h4>
+					<h2 className='text-white m-0'>{commonDetails.name}</h2>
+					<h4 className='text-white m-0'>{commonDetails.type}</h4>
 				</div>
 			</LogoContainer>
-			<MenuWrapper className='flex'>
+			<MenuWrapper className='flex m-0'>
 				{menuList.map((list) => (
 					<Link key={list.name} {...list} />
 				))}
