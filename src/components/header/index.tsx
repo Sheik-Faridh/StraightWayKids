@@ -1,4 +1,6 @@
+import { useHistory, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
+import { classnames } from 'utils';
 import logo from 'assets/images/logo.png';
 import { MenuLink } from 'typings';
 import { useSelector } from 'react-redux';
@@ -48,10 +50,29 @@ const menuList: MenuLink[] = [
 	},
 ];
 
+const Link = ({ name, path }: MenuLink) => {
+	const history = useHistory();
+	const { pathname } = useLocation();
+
+	const handleClick = () => {
+		history.push(path);
+	};
+
+	return (
+		<li
+			key={name}
+			className={classnames({
+				'cursor-pointer': true,
+				active: pathname === path,
+			})}
+			onClick={handleClick}>
+			{name}
+		</li>
+	);
+};
+
 const Header = () => {
 	const commonDetails = useSelector((state: RootState) => state.common);
-
-	if (!Object.keys(commonDetails).length) return null;
 
 	return (
 		<AppHeader className='flex items-center justify-around fixed t-0 w-full z-10'>
@@ -66,9 +87,7 @@ const Header = () => {
 			</LogoContainer>
 			<MenuWrapper className='flex'>
 				{menuList.map((list) => (
-					<li key={list.name} className='cursor-pointer'>
-						{list.name}
-					</li>
+					<Link key={list.name} {...list} />
 				))}
 			</MenuWrapper>
 		</AppHeader>

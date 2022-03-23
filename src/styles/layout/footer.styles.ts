@@ -78,7 +78,8 @@ export const footerTopContainerStyles = (props: { theme: Theme }) => {
     `;
 };
 
-export const footerBottomContainerStyles = () => {
+export const footerBottomContainerStyles = (props: { theme: Theme }) => {
+	const { primaryHoverColor } = props.theme;
 	return `
     padding: 20px 30px;
 	background-color: rgba(246, 247, 249, 1);
@@ -86,6 +87,9 @@ export const footerBottomContainerStyles = () => {
 		color: #12344d;
 		& a {
 			margin: 0 5px;
+            &:hover {
+                color: ${primaryHoverColor};
+            }
 		}
 	}
 	& ul {

@@ -43,6 +43,9 @@ export const menuWrapperStyles = (props: { theme: Theme }) => {
 		&:hover {
 			color: ${primaryHoverColor};
 		}
+		&.active {
+			color: ${primaryHoverColor};
+		}
 	}
     `;
 };
