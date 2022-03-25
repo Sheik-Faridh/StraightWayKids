@@ -1,4 +1,4 @@
-import { SelectProps } from 'antd';
+import { DatePickerProps, SelectProps } from 'antd';
 
 export interface TextFieldProps
 	extends React.DetailedHTMLProps<
@@ -18,6 +18,11 @@ export interface TextAreaProps
 
 export interface CustomSelectProps extends SelectProps {
 	options: { name: string; value: string }[];
+	label: string;
+	required: boolean;
+}
+
+export interface CustomDatePickerProps extends DatePickerProps {
 	label: string;
 	required: boolean;
 }

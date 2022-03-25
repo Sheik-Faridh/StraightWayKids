@@ -125,3 +125,8 @@ html::-webkit-scrollbar-track {
 	color: #12344d !important;
 	font-size: 13px;
 }
+
+div.ant-picker-input > input {
+	box-shadow: none !important;
+	border: none !important;
+}
