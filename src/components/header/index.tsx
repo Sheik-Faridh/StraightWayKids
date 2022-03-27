@@ -63,7 +63,7 @@ const Link = ({ name, path }: MenuLink) => {
 			key={name}
 			className={classnames({
 				'cursor-pointer': true,
-				'text-base': true,
+				'text-lg': true,
 				active: pathname === path,
 			})}
 			onClick={handleClick}>

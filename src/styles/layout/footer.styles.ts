@@ -12,42 +12,42 @@ export const footerTopContainerStyles = (props: { theme: Theme }) => {
         width: 25%;
         gap: 20px;
         & div.logo-wrapper {
-        gap: 10px;
-        & div.img-wrapper {
-            width: 100px;
-            height: 100px;
-        }
-        & div.school-name {
-            color: #fff;
-            font-family: 'Arabic';
-            & h2 {
-            font-size: 3.5rem;
-            line-height: 0.9;
+            gap: 10px;
+            & div.img-wrapper {
+                width: 100px;
+                height: 100px;
             }
-            & h4 {
-            font-size: 1.5rem;
+            & div.school-name {
+                color: #fff;
+                font-family: 'Arabic';
+                & h2 {
+                    font-size: 3.5rem;
+                    line-height: 0.9;
+                }
+                & h4 {
+                    font-size: 1.5rem;
+                }
             }
-        }
         }
     }
     & div.quick-links {
         width: 25%;
         gap: 10px;
         & h4 {
-        color: #c8e6fc;
-        font-size: 1.5rem;
+            color: #c8e6fc;
+            font-size: 1.5rem;
         }
         & ul {
         & li {
             padding: 8px 12px;
             ::before {
-            content: '\\203A';
-            color: ${primaryHoverColor};
-            margin-right: 15px;
-            font-size: 24px;
+                content: '\\203A';
+                color: ${primaryHoverColor};
+                margin-right: 15px;
+                font-size: 24px;
             }
             & a:hover {
-            color: ${primaryHoverColor};
+                color: ${primaryHoverColor};
             }
         }
         }
@@ -56,23 +56,23 @@ export const footerTopContainerStyles = (props: { theme: Theme }) => {
         width: 25%;
         gap: 20px;
         & h4 {
-        color: #c8e6fc;
-        font-size: 1.5rem;
+            color: #c8e6fc;
+            font-size: 1.5rem;
         }
         & div.contact-lists {
-        gap: 20px;
-        & a {
             gap: 20px;
-            & svg {
-            position: relative;
-            top: 3px;
-            font-size: 25px;
-            color: #5b8eab;
+            & a {
+                gap: 20px;
+                & svg {
+                    position: relative;
+                    top: 3px;
+                    font-size: 25px;
+                    color: #5b8eab;
+                }
+                & span:hover {
+                    color: ${primaryHoverColor};
+                }
             }
-            & span:hover {
-            color: ${primaryHoverColor};
-            }
-        }
         }
     }
     `;

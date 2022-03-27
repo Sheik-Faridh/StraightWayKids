@@ -1,0 +1,19 @@
+{
+	"email": "straightwaykidsschool@gmail.com",
+	"phone_number": "+919894742228",
+	"timings": [
+		{
+			"from": "Monday",
+			"to": "Saturday",
+			"startTime": "9:00 am",
+			"endTime": "7:00 pm"
+		},
+		{
+			"from": "Sunday",
+			"to": "",
+			"startTime": "10:00 am",
+			"endTime": "5:00 pm"
+		}
+	],
+	"address": "33-A, Pulavar Street, Cumbum"
+}

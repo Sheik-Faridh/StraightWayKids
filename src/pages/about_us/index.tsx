@@ -6,7 +6,7 @@ import Vision from './vision';
 import aboutUsContainerStyles from 'styles/about_us/about_us.styles';
 
 const Container = styled.section.attrs({
-	className: 'w-screen min-h-screen p-10',
+	className: 'w-screen p-10',
 })`
 	${aboutUsContainerStyles}
 `;

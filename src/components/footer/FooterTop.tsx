@@ -49,7 +49,7 @@ const FooterTop = () => {
 			<div className='flex flex-col school-details'>
 				<Logo />
 				<p
-					className='text-white'
+					className='text-white text-lg'
 					dangerouslySetInnerHTML={{
 						__html: DOMPurify.sanitize(commonDetails.footer_details.about),
 					}}></p>
@@ -59,7 +59,7 @@ const FooterTop = () => {
 				<ul className='flex flex-wrap'>
 					{commonDetails.footer_details.quick_links.map((l) => (
 						<li className='w-1/2 text-white' key={l.name}>
-							<a href={l.path} className='text-white'>
+							<a href={l.path} className='text-white text-lg'>
 								{l.name}
 							</a>
 						</li>
@@ -74,7 +74,7 @@ const FooterTop = () => {
 							<a key={k} href={v.link} className='flex flex-row'>
 								<Icon name={k} />
 								<span
-									className='text-white'
+									className='text-white text-lg'
 									dangerouslySetInnerHTML={{
 										__html: DOMPurify.sanitize(v.text),
 									}}></span>
