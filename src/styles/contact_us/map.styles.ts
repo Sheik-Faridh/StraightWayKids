@@ -1,4 +1,4 @@
-import mapContainerBg from 'assets/images/map_container_bg.avif';
+import mapContainerBg from 'assets/images/map-container-bg.avif';
 
 const mapContainerStyles = () => {
 	return `

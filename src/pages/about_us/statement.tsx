@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import DOMPurify from 'dompurify';
-import aboutImage from 'assets/images/about_us.avif';
+import aboutImage from 'assets/images/about-us.avif';
 import aboutUsData from 'mock/about.json';
 import statementContainerStyles from 'styles/about_us/statement.styles';
 

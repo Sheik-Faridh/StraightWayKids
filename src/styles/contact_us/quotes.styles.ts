@@ -1,7 +1,7 @@
 const quotesContainerStyles = () => {
 	return `
         padding: 60px;
-        background-color: #cfdde5;
+        background-color: #e6edf1;
 
         & div.wrapper {
             background-color: #fff;
@@ -78,6 +78,13 @@ const quotesContainerStyles = () => {
             border-radius:20px;
             padding: 25px;
             background-color: #f0f8fb7d;
+
+            & > .image-wrapper {
+                width: 40px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 10px;
+            }
         }
     `;
 };

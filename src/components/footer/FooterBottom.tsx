@@ -40,7 +40,7 @@ const FooterBottom = () => {
 
 	return (
 		<Container className='flex justify-around	items-center'>
-			<p className='copyrights m-0'>
+			<p className='copyrights m-0 text-base'>
 				© 2021 Developed By
 				<a
 					href={commonDetails.developed_by.link}
@@ -50,7 +50,7 @@ const FooterBottom = () => {
 				</a>
 				. All Right Reserved
 			</p>
-			<div className='contact-details'>
+			<div className='contact-details text-base'>
 				Follow us:
 				<ul className='inline-flex'>
 					{socialMediaLists.map((media) => (

@@ -2,7 +2,7 @@ const contactContainerStyles = () => {
 	return `
         flex-basis: 70%;
         padding: 40px;
-        background-color: #dbe6ef;
+        background-color: #e8eff5;
 
         & p {
             margin-bottom: 12px;

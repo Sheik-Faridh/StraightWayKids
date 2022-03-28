@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import duaHandsImage from 'assets/images/dua-hands.png';
 import quotesContainerStyles from 'styles/contact_us/quotes.styles';
 
 const Container = styled.div`
@@ -23,6 +24,9 @@ const Quotes = () => {
 						We earnestly request you all to pray Allah (SWT) to give us strength
 						and right guidance so as to deliver a meaningful learning experience
 						to the student community, Ameen!
+						<div className='image-wrapper'>
+							<img src={duaHandsImage} alt='Dua Hands' />
+						</div>
 					</h1>
 				</div>
 			</div>

@@ -2,7 +2,7 @@ const prospectusStyles = () => {
 	return `
     height: 80vh;
 	gap: 30px;
-	background-image: url(${require('assets/images/home_bg.jpg').default});
+	background-image: url(${require('assets/images/home-bg.jpg').default});
 	background-position: top center;
 	background-repeat: no-repeat;
 	background-size: cover;

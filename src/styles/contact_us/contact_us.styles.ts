@@ -1,4 +1,4 @@
-import contactUsBg from 'assets/images/contact_us.avif';
+import contactUsBg from 'assets/images/contact-us.avif';
 
 const contactUsContainerStyles = () => {
 	return `
