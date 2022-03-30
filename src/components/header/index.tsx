@@ -37,6 +37,10 @@ const menuList: MenuLink[] = [
 		path: '/admission',
 	},
 	{
+		name: 'Gallery',
+		path: '/gallery',
+	},
+	{
 		name: 'NewsLetter',
 		path: '/newsletter',
 	},

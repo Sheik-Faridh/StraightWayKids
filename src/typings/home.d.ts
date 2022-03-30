@@ -8,7 +8,6 @@ export interface BoardSchoolMemberModel {
 }
 
 export interface Video {
-	bg: string;
 	quotes: string;
 	quotes_in: string;
 }

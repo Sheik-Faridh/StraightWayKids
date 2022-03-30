@@ -1,6 +1,6 @@
-import contactUsBg from 'assets/images/contact-us.avif';
+import galleryBg from 'assets/images/gallery-bg.avif';
 
-const contactUsContainerStyles = () => {
+const galleryContainerStyles = () => {
 	return `
         top: 90px;
         margin-bottom: 90px;
@@ -8,27 +8,27 @@ const contactUsContainerStyles = () => {
 
         & > div.image-screen {
             position: relative;
-            top: 50px;
-            margin-bottom: 50px;
-            background-image: url(${contactUsBg});
+            background-image: url(${galleryBg});
             background-position: bottom center;
             background-repeat: no-repeat;
             background-size: cover;
             background-attachment: fixed;
             transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
-            padding: 35% 0% 0% 0%;
+            padding: 25% 0% 0% 0%;
 
             & > div {
-                transform: translate(-50%, -50%);
+                left: 80px;
+                transform: translate(0, -50%);
             }
-        }
 
-        & > div.contact-details-container {
-            margin: 2.5% 10.5% 0.5%;
-            padding: 30px 0;
-            height: 60vh;
+            & > div.ant-divider {
+                width: 50%;
+                min-width: 50%;
+                top: 53%;
+                border-color: #fff;
+            }
         }
     `;
 };
 
-export default contactUsContainerStyles;
+export default galleryContainerStyles;

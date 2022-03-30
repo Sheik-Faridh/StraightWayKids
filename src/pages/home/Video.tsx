@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
 import { RootState } from 'store';
+import videoBg from 'assets/images/video-bg.jpg';
 import videoContainerStyles from 'styles/home/video.styles';
 
 const Container = styled.section`
@@ -14,11 +15,7 @@ const Video = () => {
 		<Container className='w-screen h-screen'>
 			<div className='flex w-full h-full items-center justify-center relative'>
 				<div className='img-wrapper absolute w-full h-full'>
-					<img
-						className='w-full h-full'
-						src={require(`assets/${video.bg}`).default}
-						alt='bg'
-					/>
+					<img className='w-full h-full' src={videoBg} alt='bg' />
 				</div>
 				<div className='overlay absolute w-full h-full'></div>
 				<div className='flex justify-center w-1/2'>

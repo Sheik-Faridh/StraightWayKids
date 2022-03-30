@@ -5,7 +5,7 @@ import Map from './map';
 import Quotes from './quotes';
 
 const Container = styled.section.attrs({
-	className: 'w-screen',
+	className: 'w-screen relative',
 })`
 	${contactUsContainerStyles}
 `;
