@@ -9,9 +9,19 @@ const Container = styled.div.attrs({
 `;
 
 const Images = () => {
-	const firstCol = galleryData.imageList.slice(0, 8);
-	const secondCol = galleryData.imageList.slice(8, 16);
-	const thirdCol = galleryData.imageList.slice(16, 24);
+	const maxImageCount =
+		galleryData.imageList.length > 24
+			? 8
+			: Math.floor(galleryData.imageList.length / 3);
+	const firstCol = galleryData.imageList.slice(0, maxImageCount);
+	const secondCol = galleryData.imageList.slice(
+		maxImageCount * 1,
+		maxImageCount * 2
+	);
+	const thirdCol = galleryData.imageList.slice(
+		maxImageCount * 2,
+		maxImageCount * 3
+	);
 	return (
 		<Container>
 			<div className='column'>

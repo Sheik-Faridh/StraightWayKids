@@ -1,108 +1,44 @@
 {
 	"imageList": [
 		{
-			"name": "wedding.jpg",
-			"src": "https://www.w3schools.com/w3images/wedding.jpg"
+			"name": "IMG-20181128-WA0004-rotated.jpg",
+			"src": "https://secureservercdn.net/198.71.233.206/mj0.18c.myftpupload.com/wp-content/uploads/2021/11/IMG-20181128-WA0004-rotated.jpg?time=1647534777"
 		},
 		{
-			"name": "rocks.jpg",
-			"src": "https://www.w3schools.com/w3images/rocks.jpg"
+			"name": "IMG-20181128-WA0000-rotated.jpg",
+			"src": "https://secureservercdn.net/198.71.233.206/mj0.18c.myftpupload.com/wp-content/uploads/2021/11/IMG-20181128-WA0000-rotated.jpg?time=1647534777"
 		},
 		{
-			"name": "falls2.jpg",
-			"src": "https://www.w3schools.com/w3images/falls2.jpg"
+			"name": "cropped-IMG_20180712_104516-min-1-scaled-1.jpg",
+			"src": "https://secureservercdn.net/198.71.233.206/mj0.18c.myftpupload.com/wp-content/uploads/2019/12/cropped-IMG_20180712_104516-min-1-scaled-1.jpg?time=1647534777"
 		},
 		{
-			"name": "paris.jpg",
-			"src": "https://www.w3schools.com/w3images/paris.jpg"
+			"name": "IMG_20180712_104516-min-scaled.jpg",
+			"src": "https://secureservercdn.net/198.71.233.206/mj0.18c.myftpupload.com/wp-content/uploads/2019/12/IMG_20180712_104516-min-scaled.jpg?time=1647534777"
 		},
 		{
-			"name": "nature.jpg",
-			"src": "https://www.w3schools.com/w3images/nature.jpg"
+			"name": "IMG-20180705-WA0010.jpg",
+			"src": "https://secureservercdn.net/198.71.233.206/mj0.18c.myftpupload.com/wp-content/uploads/2021/11/IMG-20180705-WA0010.jpg?time=1647534777"
 		},
 		{
-			"name": "mist.jpg",
-			"src": "https://www.w3schools.com/w3images/mist.jpg"
+			"name": "IMG_20190125_102130-scaled.jpg",
+			"src": "https://secureservercdn.net/198.71.233.206/mj0.18c.myftpupload.com/wp-content/uploads/2021/11/IMG_20190125_102130-scaled.jpg?time=1647534777"
 		},
 		{
-			"name": "paris.jpg",
-			"src": "https://www.w3schools.com/w3images/paris.jpg"
+			"name": "IMG_20190125_101900-scaled.jpg",
+			"src": "https://secureservercdn.net/198.71.233.206/mj0.18c.myftpupload.com/wp-content/uploads/2021/11/IMG_20190125_101900-scaled.jpg?time=1647534777"
 		},
 		{
-			"name": "underwater.jpg",
-			"src": "https://www.w3schools.com/w3images/underwater.jpg"
+			"name": "IMG_20190126_100916-scaled.jpg",
+			"src": "https://secureservercdn.net/198.71.233.206/mj0.18c.myftpupload.com/wp-content/uploads/2021/11/IMG_20190126_100916-scaled.jpg?time=1647534777"
 		},
 		{
-			"name": "ocean.jpg",
-			"src": "https://www.w3schools.com/w3images/ocean.jpg"
+			"name": "1.jpg",
+			"src": "https://secureservercdn.net/198.71.233.206/mj0.18c.myftpupload.com/wp-content/uploads/2019/12/1.jpg?time=1647534777"
 		},
 		{
-			"name": "wedding.jpg",
-			"src": "https://www.w3schools.com/w3images/wedding.jpg"
-		},
-		{
-			"name": "mountainskies.jpg",
-			"src": "https://www.w3schools.com/w3images/mountainskies.jpg"
-		},
-		{
-			"name": "rocks.jpg",
-			"src": "https://www.w3schools.com/w3images/rocks.jpg"
-		},
-		{
-			"name": "underwater.jpg",
-			"src": "https://www.w3schools.com/w3images/underwater.jpg"
-		},
-		{
-			"name": "wedding.jpg",
-			"src": "https://www.w3schools.com/w3images/wedding.jpg"
-		},
-		{
-			"name": "rocks.jpg",
-			"src": "https://www.w3schools.com/w3images/rocks.jpg"
-		},
-		{
-			"name": "falls2.jpg",
-			"src": "https://www.w3schools.com/w3images/falls2.jpg"
-		},
-		{
-			"name": "paris.jpg",
-			"src": "https://www.w3schools.com/w3images/paris.jpg"
-		},
-		{
-			"name": "nature.jpg",
-			"src": "https://www.w3schools.com/w3images/nature.jpg"
-		},
-		{
-			"name": "mist.jpg",
-			"src": "https://www.w3schools.com/w3images/mist.jpg"
-		},
-		{
-			"name": "paris.jpg",
-			"src": "https://www.w3schools.com/w3images/paris.jpg"
-		},
-		{
-			"name": "underwater.jpg",
-			"src": "https://www.w3schools.com/w3images/underwater.jpg"
-		},
-		{
-			"name": "ocean.jpg",
-			"src": "https://www.w3schools.com/w3images/ocean.jpg"
-		},
-		{
-			"name": "wedding.jpg",
-			"src": "https://www.w3schools.com/w3images/wedding.jpg"
-		},
-		{
-			"name": "mountainskies.jpg",
-			"src": "https://www.w3schools.com/w3images/mountainskies.jpg"
-		},
-		{
-			"name": "rocks.jpg",
-			"src": "https://www.w3schools.com/w3images/rocks.jpg"
-		},
-		{
-			"name": "underwater.jpg",
-			"src": "https://www.w3schools.com/w3images/underwater.jpg"
+			"name": "1538730765773-min.jpg",
+			"src": "https://secureservercdn.net/198.71.233.206/mj0.18c.myftpupload.com/wp-content/uploads/2019/12/1538730765773-min.jpg?time=1647534777"
 		}
 	]
 }
