@@ -2,14 +2,11 @@ import contactUsBg from 'assets/images/contact-us.avif';
 
 const contactUsContainerStyles = () => {
 	return `
-        top: 90px;
-        margin-bottom: 90px;
+        padding: 0;
+        margin-top: 140px;
         min-height: calc(100vh - 575px);
 
         & > div.image-screen {
-            position: relative;
-            top: 50px;
-            margin-bottom: 50px;
             background-image: url(${contactUsBg});
             background-position: bottom center;
             background-repeat: no-repeat;

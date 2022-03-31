@@ -2,8 +2,8 @@ import galleryBg from 'assets/images/gallery-bg.avif';
 
 const galleryContainerStyles = () => {
 	return `
-        top: 90px;
-        margin-bottom: 90px;
+        margin-top: 90px;
+        padding: 0;
         min-height: calc(100vh - 575px);
 
         & > div.image-screen {

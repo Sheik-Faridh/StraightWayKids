@@ -1,8 +1,7 @@
 const aboutUsContainerStyles = () => {
 	return `
-        position: relative;
-        top: 90px;
-        margin-bottom: 90px;
+        margin-top: 130px;
+        padding: 0;
         min-height: calc(100vh - 575px);
     `;
 };

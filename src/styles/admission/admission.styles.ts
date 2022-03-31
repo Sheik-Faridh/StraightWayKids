@@ -1,8 +1,6 @@
 const admissionContainerStyles = () => {
 	return `
-        position: relative;
-        top: 90px;
-        margin-bottom: 90px;
+        margin-top: 90px;
         min-height: calc(100vh - 575px);
     `;
 };

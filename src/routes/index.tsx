@@ -1,4 +1,4 @@
-import { useLayoutEffect, useMemo } from 'react';
+import { useLayoutEffect } from 'react';
 import {
 	BrowserRouter as Router,
 	Switch,
@@ -15,7 +15,6 @@ import Header from 'components/header';
 import Gallery from 'pages/gallery';
 import Home from 'pages/home';
 import NotFound from 'pages/not_found';
-import { RootState } from 'store';
 
 const ScrollToTop = () => {
 	const location = useLocation();
@@ -32,16 +31,9 @@ const ScrollToTop = () => {
 };
 
 const Routes = () => {
-	const commonDetails = useSelector((state: RootState) => state.common);
-
-	const renderLayout = useMemo(
-		() => !!Object.keys(commonDetails).length,
-		[commonDetails]
-	);
-
 	return (
 		<Router>
-			{renderLayout && <Header />}
+			<Header />
 			<ScrollToTop />
 			<Switch>
 				<Route path='/' exact component={Home} />
@@ -52,7 +44,7 @@ const Routes = () => {
 				<Route path='/not-found' exact component={NotFound} />
 				<Route path='*' component={() => <Redirect to='/not-found' />} />
 			</Switch>
-			{renderLayout && <Footer />}
+			<Footer />
 		</Router>
 	);
 };

@@ -1,5 +1,6 @@
 import { useHistory, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
+import Skeleton from 'components/skeleton';
 import { classnames } from 'utils';
 import logo from 'assets/images/logo.png';
 import { MenuLink } from 'typings';
@@ -79,8 +80,10 @@ const Link = ({ name, path }: MenuLink) => {
 const Header = () => {
 	const commonDetails = useSelector((state: RootState) => state.common);
 
+	if (!Object.keys(commonDetails).length) return <Skeleton.Header />;
+
 	return (
-		<AppHeader className='flex items-center justify-around fixed t-0 w-full z-10'>
+		<AppHeader className='flex items-center justify-around fixed top-0 w-full z-10'>
 			<LogoContainer className='flex items-center'>
 				<div className='logo-wrapper'>
 					<img src={logo} className='w-full h-full' alt='Logo' />

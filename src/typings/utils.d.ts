@@ -14,18 +14,14 @@ export interface SocialMediaLink {
 export interface LoaderProps {
 	setLoading: (arg: boolean) => void;
 }
-
-export interface PositionProps {
-	position: number;
-}
-
 export interface ElementProps {
 	size: number;
 }
 
-export interface CurriculumElementProps extends PositionProps {
+export interface CurriculumElementProps {
 	count: number;
 	size: number;
+	position: number;
 }
 
 export interface CurriculumElementState {
