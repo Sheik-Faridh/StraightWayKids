@@ -9,6 +9,7 @@ import {
 import AboutUs from 'pages/about_us';
 import Admission from 'pages/admission';
 import ContactUs from 'pages/contact_us';
+import Franchise from 'pages/franchise';
 import Footer from 'components/footer';
 import Header from 'components/header';
 import Gallery from 'pages/gallery';
@@ -36,6 +37,7 @@ const Routes = () => {
 				<Route path='/about-us' exact component={AboutUs} />
 				<Route path='/admission' exact component={Admission} />
 				<Route path='/gallery' exact component={Gallery} />
+				<Route path='/franchise' exact component={Franchise} />
 				<Route path='/contact-us' exact component={ContactUs} />
 				<Route path='/not-found' exact component={NotFound} />
 				<Route path='*' component={() => <Redirect to='/not-found' />} />

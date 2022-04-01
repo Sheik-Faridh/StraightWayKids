@@ -6,7 +6,8 @@
 	"video": {
 		"bg": "images/video-bg.jpg",
 		"quotes": "Dedicated to Excellence “The seeking of knowledge is obligatory for every Muslim.”",
-		"quotes_in": "“Al-Tirmidhi, Hadith 74”"
+		"quotes_in": "“Al-Tirmidhi, Hadith 74”",
+		"src": "https://www.youtube.com/embed/H_kVw_CHdoo"
 	},
 	"sliderImages": [
 		{ "name": "image-slider-1.jpg", "content": "Hafiz + Professional" },
