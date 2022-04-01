@@ -1,8 +1,9 @@
 import { Provider } from 'react-redux';
+import { ThemeProvider } from 'styled-components';
 import Routes from 'routes';
+import ErrorBoundary from 'components/error_boundary';
 import store from 'store';
 import { fetchCommonDetails } from 'store/actions/common.actions';
-import { ThemeProvider } from 'styled-components';
 import theme from 'themes';
 import './App.css';
 
@@ -10,7 +11,9 @@ const App = () => {
 	return (
 		<ThemeProvider theme={theme}>
 			<Provider store={store}>
-				<Routes />
+				<ErrorBoundary>
+					<Routes />
+				</ErrorBoundary>
 			</Provider>
 		</ThemeProvider>
 	);
