@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
-import { CSSTransition } from 'react-transition-group';
 import styled from 'styled-components';
 import { BsArrowRightShort } from 'react-icons/bs';
 import DOMPurify from 'dompurify';
@@ -78,21 +77,16 @@ const Objective = () => {
 	const objective = useSelector((state: RootState) => state.home.objective);
 	return (
 		<ObjectiveContainer>
-			<CSSTransition
-				classNames='fade'
-				timeout={{ enter: 5000, exit: 5000 }}
-				key='homePageObjective'>
-				<div className='pl-3'>
-					<p
-						dangerouslySetInnerHTML={{
-							__html: DOMPurify.sanitize(objective),
-						}}
-					/>
-					<a href='/about-us' className='readmore'>
-						Read More <BsArrowRightShort />
-					</a>
-				</div>
-			</CSSTransition>
+			<div className='pl-3'>
+				<p
+					dangerouslySetInnerHTML={{
+						__html: DOMPurify.sanitize(objective),
+					}}
+				/>
+				<a href='/about-us' className='readmore'>
+					Read More <BsArrowRightShort />
+				</a>
+			</div>
 		</ObjectiveContainer>
 	);
 };

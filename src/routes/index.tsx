@@ -6,7 +6,6 @@ import {
 	Redirect,
 	useLocation,
 } from 'react-router-dom';
-import { useSelector } from 'react-redux';
 import AboutUs from 'pages/about_us';
 import Admission from 'pages/admission';
 import ContactUs from 'pages/contact_us';
@@ -15,16 +14,13 @@ import Header from 'components/header';
 import Gallery from 'pages/gallery';
 import Home from 'pages/home';
 import NotFound from 'pages/not_found';
+import { scrollTo } from 'utils';
 
 const ScrollToTop = () => {
 	const location = useLocation();
 
 	useLayoutEffect(() => {
-		window.scrollTo({
-			top: 0,
-			left: 0,
-			behavior: 'smooth',
-		});
+		scrollTo();
 	}, [location]);
 
 	return null;
