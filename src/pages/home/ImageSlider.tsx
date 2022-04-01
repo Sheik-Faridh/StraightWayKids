@@ -1,7 +1,6 @@
-import { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import styled from 'styled-components';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import { Carousel } from 'antd';
 import imageSliderStyles from 'styles/home/imageSider.styles';
 import { RootState } from 'store';
 
@@ -11,35 +10,25 @@ const Container = styled.section`
 
 const ImageSlides = () => {
 	const sliderList = useSelector((state: RootState) => state.home.sliderImages);
-	const sliderListLength = sliderList.length - 1;
-	const [index, setIndex] = useState(1);
-
-	useEffect(() => {
-		const timer = setInterval(() => {
-			setIndex((prevState) =>
-				prevState >= sliderListLength ? 0 : prevState + 1
-			);
-		}, 5000);
-		return () => clearInterval(timer);
-	}, [sliderListLength]);
 
 	return (
 		<div className='slider-container relative w-full'>
-			<TransitionGroup>
-				<CSSTransition
-					classNames='slide'
-					timeout={{ enter: 5000, exit: 5000 }}
-					key={sliderList[index].name}>
-					<img
-						className='w-full h-full object-cover'
-						src={require(`assets/images/${sliderList[index].name}`).default}
-						alt={sliderList[index].name}
-					/>
-				</CSSTransition>
-			</TransitionGroup>
-			<div className='absolute flex items-center justify-center w-full h-full text-white'>
-				{sliderList[index].content}
-			</div>
+			<Carousel autoplay dots={false}>
+				{sliderList.map((s, i) => (
+					<div key={i} className='image-slider relative h-screen'>
+						<div className='image-wrapper'>
+							<img
+								className='w-full h-full object-cover'
+								src={require(`assets/images/${s.name}`).default}
+								alt={s.name}
+							/>
+						</div>
+						<div className='absolute flex items-center justify-center w-full h-full text-white text-6xl'>
+							{s.content}
+						</div>
+					</div>
+				))}
+			</Carousel>
 		</div>
 	);
 };
