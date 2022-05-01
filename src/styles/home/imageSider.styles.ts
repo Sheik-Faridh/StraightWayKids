@@ -35,9 +35,19 @@ const imageSliderStyles = () => {
 				left: 0;
 			}
 		}
-		& > div:nth-child(2) {
-			font-size: 6em;
-			font-family: National-Book, National-Medium, sans-serif;
+	}
+	& .image-text {
+		top: 40%;
+		left: 50%;
+		transform: translate(-50%, -40%);
+		text-align: center;
+	}
+
+	@media screen and (max-width: 1024px) {
+		& > div.slider-container {
+			& .image-text {
+				font-size: 6vw;
+			}
 		}
 	}
     `;

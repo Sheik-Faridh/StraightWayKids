@@ -96,7 +96,7 @@ const Curriculum = () => {
 	const { home, common } = rootState;
 	return (
 		<Container>
-			<div className='flex flex-col w-8/12 p-4 shadow-lg bg-white'>
+			<div className='flex flex-col w-9/12 p-4 shadow-lg bg-white'>
 				<div className='headings'>
 					<h4>{home.title}</h4>
 					<h1>

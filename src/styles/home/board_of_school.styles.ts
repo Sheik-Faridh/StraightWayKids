@@ -34,6 +34,14 @@ const boardOfSchoolStyles = () => {
 			}
 		}
 	}
+
+	@media screen and (max-width: 1024px){
+		& > div.board-member-container {
+			& > div.user-info-wrapper {
+				width: 80%;
+			}
+		}
+	}
     `;
 };
 

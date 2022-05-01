@@ -39,6 +39,25 @@ const prospectusStyles = () => {
 		word-spacing: 20px;
 		letter-spacing: -16px;
 	}
+
+	@media screen and (max-width: 1024px) {
+		& h1.arabic-content {
+			font-size: 40px;
+		}
+		& h1.english-content {
+			font-size: 44px;
+		}
+	}
+
+	@media only screen and (max-width: 425px) {
+		& h1.arabic-content {
+			font-size: 5vw;
+			letter-spacing: 1px;
+		}
+		& h1.english-content {
+			font-size: 6vw;
+		}
+	}
     `;
 };
 

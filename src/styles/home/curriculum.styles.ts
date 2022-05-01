@@ -26,6 +26,32 @@ export const containerStyles = () => {
 			margin-bottom: 15px;
 		}
 	}
+
+	@media screen and (max-width: 1270px){
+		& > div.flex {
+			width: 100%;
+			padding-bottom: 60px;
+
+			& > div.flex {
+				flex-direction: column;
+				gap: 85px;
+				& > div {
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	@media only screen and (max-width: 425px) {
+		& .headings {
+			& > h4 {
+				font-size: 18px;
+			}
+			& > h1 {
+				font-size: 40px;
+			}
+		}
+	}
     `;
 };
 
@@ -46,6 +72,7 @@ export const elementContainerStyles = ({ ...props }: ElementProps) => {
 	const { size } = props;
 	return `
     width: 50%;
+	height: 30rem;
 	& > div {
 		width: ${size}em;
 		height: ${size}em;
@@ -98,6 +125,15 @@ export const elementContainerStyles = ({ ...props }: ElementProps) => {
 			}
 		}
 	}
+
+	@media only screen and (max-width: 425px){
+		& > div {
+			& ul {
+				width: 85%;
+				height: 85%;
+			}
+		}
+	}
     `;
 };
 
@@ -132,6 +168,13 @@ export const elementListStyles = ({ ...props }: CurriculumElementProps) => {
 	}
 	& span {
 		font-size: 12px;
+	}
+
+	@media only screen and (max-width: 425px){
+
+		& img {
+			width: 28%;
+		}
 	}
     `;
 };

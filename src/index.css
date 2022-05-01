@@ -130,3 +130,11 @@ div.ant-picker-input > input {
 	box-shadow: none !important;
 	border: none !important;
 }
+
+.ant-dropdown.page-menu-dropdown.ant-dropdown-placement-bottom {
+	position: fixed;
+	width: 100vw;
+	left: 0 !important;
+	top: 90px !important;
+	background-color: #f8fdff;
+}

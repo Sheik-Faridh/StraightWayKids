@@ -13,7 +13,7 @@ const ImageSlides = () => {
 
 	return (
 		<div className='slider-container relative w-full'>
-			<Carousel autoplay dots={false}>
+			<Carousel dots={false}>
 				{sliderList.map((s, i) => (
 					<div key={i} className='image-slider relative h-screen'>
 						<div className='image-wrapper'>
@@ -23,7 +23,7 @@ const ImageSlides = () => {
 								alt={s.name}
 							/>
 						</div>
-						<div className='absolute flex items-center justify-center w-full h-full text-white text-6xl'>
+						<div className='absolute text-white text-6xl image-text'>
 							{s.content}
 						</div>
 					</div>

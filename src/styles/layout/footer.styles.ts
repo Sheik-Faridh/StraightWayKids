@@ -38,18 +38,18 @@ export const footerTopContainerStyles = (props: { theme: Theme }) => {
             font-size: 1.5rem;
         }
         & ul {
-        & li {
-            padding: 8px 12px;
-            ::before {
-                content: '\\203A';
-                color: ${primaryHoverColor};
-                margin-right: 15px;
-                font-size: 24px;
+            & li {
+                padding: 8px 12px;
+                ::before {
+                    content: '\\203A';
+                    color: ${primaryHoverColor};
+                    margin-right: 15px;
+                    font-size: 24px;
+                }
+                & a:hover {
+                    color: ${primaryHoverColor};
+                }
             }
-            & a:hover {
-                color: ${primaryHoverColor};
-            }
-        }
         }
     }
     & div.contact-details {
@@ -71,6 +71,28 @@ export const footerTopContainerStyles = (props: { theme: Theme }) => {
                 }
                 & span:hover {
                     color: ${primaryHoverColor};
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 1024px) {
+        height: auto;
+        gap: 20px;
+        flex-direction: column;
+        padding: 40px 20px;
+        align-items: center;
+
+        & div.school-details,
+        & div.quick-links,
+        & div.contact-details {
+            width: 75%;
+        }
+
+        & div.quick-links {
+            & ul {
+                & li {
+                    width: 30%;
                 }
             }
         }
@@ -108,5 +130,10 @@ export const footerBottomContainerStyles = (props: { theme: Theme }) => {
 			}
 		}
 	}
+
+    @media screen and (max-width: 1024px) {
+        flex-direction: column;
+        gap: 20px;
+    }
     `;
 };

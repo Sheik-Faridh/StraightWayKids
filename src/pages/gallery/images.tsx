@@ -27,6 +27,7 @@ const Images = () => {
 			<div className='column'>
 				{firstCol.map((g) => (
 					<img
+						key={g.src}
 						src={g.src}
 						alt={g.name}
 						className='shadow-xl rounded transform transition duration-500 hover:scale-90'
@@ -36,6 +37,7 @@ const Images = () => {
 			<div className='column'>
 				{secondCol.map((g) => (
 					<img
+						key={g.src}
 						src={g.src}
 						alt={g.name}
 						className='shadow-xl rounded transform transition duration-500 hover:scale-90'
@@ -45,6 +47,7 @@ const Images = () => {
 			<div className='column'>
 				{thirdCol.map((g) => (
 					<img
+						key={g.src}
 						src={g.src}
 						alt={g.name}
 						className='shadow-xl rounded transform transition duration-500 hover:scale-90'

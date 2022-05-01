@@ -5,7 +5,7 @@ import Map from './map';
 import Quotes from './quotes';
 
 const Container = styled.section.attrs({
-	className: 'w-screen relative',
+	className: 'w-screen',
 })`
 	${contactUsContainerStyles}
 `;
@@ -13,7 +13,7 @@ const Container = styled.section.attrs({
 const ContactUs = () => {
 	return (
 		<Container>
-			<div className='image-screen'>
+			<div className='image-screen relative'>
 				<div className='absolute top-1/2 left-1/2 text-5xl uppercase text-white'>
 					Contact Us
 				</div>

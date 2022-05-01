@@ -16,6 +16,32 @@ const videoContainerStyles = () => {
 	& p {
 		color: #fff;
 	}
+	& .basis-full {
+		flex-basis: 100%;
+	}
+	& iframe {
+		width: 560px;
+		height: 315px;
+	}
+
+	@media screen and (max-width: 1024px){
+		& div.video-wrapper {
+			flex-direction: column;
+			& h2 {
+				font-size: 2em;
+			}
+			& .text-wrapper * {
+				width: 70%;
+			}
+		}
+	}
+
+	@media only screen and (max-width: 425px){
+		& iframe {
+			width: auto;
+			height: 290px;
+		}
+	}
     `;
 };
 

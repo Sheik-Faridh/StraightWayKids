@@ -24,6 +24,12 @@ const ScrollToTop = () => {
 		scrollTo();
 	}, [location]);
 
+	useLayoutEffect(() => {
+		window.addEventListener('beforeunload', () => scrollTo());
+
+		return () => window.removeEventListener('beforeunload', () => scrollTo());
+	}, []);
+
 	return null;
 };
 
