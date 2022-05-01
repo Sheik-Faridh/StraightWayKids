@@ -26,6 +26,9 @@ const pillarsContainerStyles = () => {
                 -webkit-box-orient: vertical;
                 overflow: hidden;
             }
+            @media screen and (max-width: 800px) {
+                flex-flow: column;
+            }
         }
     `;
 };

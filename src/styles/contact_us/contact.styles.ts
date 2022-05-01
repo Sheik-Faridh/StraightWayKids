@@ -4,6 +4,11 @@ const contactContainerStyles = () => {
         padding: 40px;
         background-color: #e8eff5;
 
+        @media screen and (max-width: 1326px) {
+            flex-basis: 85%;
+            padding: 20px;
+        }
+
         & p {
             margin-bottom: 12px;
         }

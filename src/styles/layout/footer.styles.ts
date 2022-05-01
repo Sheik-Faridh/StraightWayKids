@@ -97,6 +97,24 @@ export const footerTopContainerStyles = (props: { theme: Theme }) => {
             }
         }
     }
+
+    @media screen and (max-width: 800px) {
+        & div.school-details,
+        & div.quick-links,
+        & div.contact-details {
+            width: 95%;
+        }
+    }
+
+    @media screen and (max-width: 520px) {
+        & div.quick-links {
+            & ul {
+                & li {
+                    width: 50%;
+                }
+            }
+        }
+    }
     `;
 };
 

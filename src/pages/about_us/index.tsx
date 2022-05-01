@@ -16,7 +16,7 @@ const AboutUs = () => {
 		<Container>
 			<div className='flex flex-col gap-10'>
 				<Statement />
-				<div className='flex flex-row'>
+				<div className='flex flex-row vision-mission-wrapper'>
 					<Vision />
 					<Mission />
 				</div>

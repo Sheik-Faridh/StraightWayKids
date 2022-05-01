@@ -3,8 +3,28 @@ const quotesContainerStyles = () => {
         padding: 60px;
         background-color: #e6edf1;
 
+        @media screen and (max-width: 1024px){
+            padding: 40px;
+        }
+        @media screen and (max-width: 800px){
+            padding: 20px;
+        }
+
         & div.wrapper {
             background-color: #fff;
+
+            @media screen and (max-width: 1470px){
+                width: 60%;
+            }
+            @media screen and (max-width: 1200px){
+                width: 70%;
+            }
+            @media screen and (max-width: 1024px){
+                width: 90%;
+            }
+            @media screen and (max-width: 800px){
+                width: 95%;
+            }
         }
 
         & blockquote {
@@ -25,6 +45,15 @@ const quotesContainerStyles = () => {
             & h1 {
                 font-size: 2.8rem;
                 line-height: 1;
+
+                @media screen and (max-width: 768px){
+                    font-size: 2rem;
+                }
+
+                @media screen and (max-width: 600px){
+                    font-size: 1.5rem;
+                }
+
                 &::before {
                     content:"";
                     position: absolute;
@@ -61,6 +90,16 @@ const quotesContainerStyles = () => {
                 z-index: 1;
                 text-align: left;
                 left: 160px;
+
+                @media screen and (max-width: 768px){
+                    font-size: 1.2rem;
+                }
+                @media screen and (max-width: 600px){
+                    font-size: 1rem;
+                }
+                @media screen and (max-width: 536px){
+                    left: 140px;
+                }
             }
         }
 
